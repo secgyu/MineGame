@@ -59,6 +59,11 @@ def draw_game_over(surface):
     text = font.render("Game Over", True, RED, WHITE)
     text_rect = text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2))
     surface.blit(text, text_rect)
+    
+    restart_font = pygame.font.Font(None, 25)
+    restart_text = restart_font.render("Tap anywhere to restart.", True, BLUE, WHITE)
+    restart_rect = restart_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 50))
+    surface.blit(restart_text, restart_rect)
 
 
 def draw_game_clear(surface):
@@ -66,6 +71,11 @@ def draw_game_clear(surface):
     text = font.render("Game Clear!!!", True, BLUE, WHITE)
     text_rect = text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2))
     surface.blit(text, text_rect)
+    
+    restart_font = pygame.font.Font(None, 25)
+    restart_text = restart_font.render("Tap anywhere to restart.", True, BLUE, WHITE)
+    restart_rect = restart_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 50))
+    surface.blit(restart_text, restart_rect)
 
 
 if __name__ == "__main__":
